@@ -6,3 +6,4 @@ setTimeout(() => {
         theme.style.display = "none";
     }, 1000);
 }, 2000);
+
