@@ -348,3 +348,52 @@ body{
         padding: 55px 6%;
     }
 }
+
+
+.about-overlay{
+    
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.75);
+}
+
+.about{
+    width: 350px;
+    max-width: 90%;
+    padding: 30px;
+    background: #100b0b;
+    color: white;
+    border: 1px solid #761414;
+    box-shadow: 0 0 0 30px rgba(150,0,0,0.3);
+    text-align: center;
+}
+
+@font-face {
+    font-family: zombie;
+    src: url(./assets/fonts/Zombie.ttf);
+    letter-spacing: 4px;
+}
+.about p{
+    font-family: zombie;
+}
+#hideAbout{
+    padding: 13px 30px;
+    background-color: #150909;
+    color: #e8dada;
+    border: 1px solid #8b1720;
+    font-family: monospace;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: translateY(-3px);
+}
+#hideAbout:hover{
+    background: #8b101b;
+    color: white;
+    border-color: #d62635;
+    box-shadow: 0 0 20px #8b101ab5;
+}
