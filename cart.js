@@ -1,4 +1,5 @@
 let cart = JSON.parse(localStorage.getItem("spookycart")) || [];
+
 const cartitem = document.querySelector(".cart-item");
 
 function updatecartitem(){
@@ -10,3 +11,14 @@ function updatecartitem(){
 }
 updatecartitem();
 
+const cartcontain = document.querySelector(".items-contain");
+
+cart.forEach(item => {
+    cartcontain.innerHTML += `
+     <div class="items">
+     <h3>${item.name}</h3>
+     <p>${item.price}</p>
+     <p>${item.quantity}</p>
+     </div>
+    `
+});

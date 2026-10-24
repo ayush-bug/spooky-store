@@ -85,3 +85,32 @@ body{
   color: #ed3945;
   margin-left: 5px;
 }
+
+.item-contain{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+    padding: 20px;
+}
+.items-contain{
+    width: 60%;
+    background: #514e4e;
+    height: 95vh;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.items{
+    width: 80%;
+   background-color: #e54d5a;
+   display: flex;
+   align-items: center;
+   flex-direction: row;
+  gap: 30%;
+}
