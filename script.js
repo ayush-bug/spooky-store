@@ -40,6 +40,7 @@ document.querySelectorAll(".add-to-cart").forEach(button => {
         const product = button.closest(".item-card");
         const name = product.dataset.name;
         const price = Number(product.dataset.price);
+        const imgPath = product.dataset.img;
         const existingItem = cart.find(item => item.name === name);
         if(existingItem){
             existingItem.quantity += 1;
@@ -48,6 +49,7 @@ document.querySelectorAll(".add-to-cart").forEach(button => {
             cart.push({
                 name: name,
                 price : price,
+                img : imgPath,
                 quantity: 1
             });
         }
