@@ -1,7 +1,7 @@
 let cart = JSON.parse(localStorage.getItem("spookycart")) || [];
 
 const cartitem = document.querySelector(".cart-item");
-
+const subtotal = document.querySelector(".sub-total");
 function updatecartitem(){
     const totalitem = cart.reduce((total,item) => {
         return total + item.quantity;
@@ -34,11 +34,12 @@ cart.forEach((item , index)=> {
      </button>
      </div>
 
-     <h3>Total: ${item.quantity} x $${item.price} = $${item.quantity*item.price}</h3>
+     <h3 style="font-family:monospace;">Total: ${item.quantity} x $${item.price} = $${item.quantity*item.price}</h3>
      </div>
     `
 });
 updatecartitem();
+makeReceipt();
 }
 cartcontain.addEventListener("click", (e)=>{
     const button = e.target.closest("button[data-action]");
@@ -62,3 +63,58 @@ cartcontain.addEventListener("click", (e)=>{
     renderCart(); 
 });
 renderCart();
+
+
+
+function makeReceipt(){
+    const totalItem = cart.reduce((total,item) => {
+        return total + item.quantity;
+    },0);
+    
+    const alltotal = cart.reduce((total, item)=>{
+         return total + (item.price * item.quantity);
+    });
+  subtotal.innerHTML = `
+    <div class="reciept">
+    <p class="name">Spooky store</p>
+    <p class="subname">THE BLOODY TRANSACTION</p>
+    <div class="line"></div>
+    <div class="bill-info">
+    <span>RECIEPT NO .</span>
+    <span>#${Math.floor(Math.random()*9000)+10000}</span>
+    </div>
+    <div class="reciept-info">
+      <span>ITEMS</span>
+      <span>${totalItem}</span>
+    </div>
+    <div class="line"></div>
+    <h4>ORDER DETAILS</h4>
+    ${cart.map(item => `
+        <div class="receipt-product">
+           <span>${item.name} x ${item.quantity}</span>
+           <span>$${item.price * item.quantity}</span>
+        </div>
+        `).join("")}
+        <div class="line"></div>
+        <div class="reciept-info">
+          <span>DELIVERY</span><span>FREE</span>
+        </div>
+   <div class="receipt-total">
+     <span>TOTAL : </span> <span>${alltotal}</span>
+   </div>
+   <div class="line"></div>
+   <p class="address">
+   NO NEED TO ENTER YOUR ADDRESS
+   <br><br>
+   OUR WITCHES KNOW YOUR HOME ALREADY .</p>
+   <button class="place-order">
+    PLACE ORDER
+   </button>
+        </div>
+  `
+
+
+
+}
+
+
