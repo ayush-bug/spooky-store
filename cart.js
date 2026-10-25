@@ -117,4 +117,20 @@ function makeReceipt(){
 
 }
 
-
+document.querySelector(".place-order").addEventListener("click", function(){
+ Swal.fire({
+  title: "Are you sure? ",
+  text: "Are you sure you want to place order , payment will be cash on delivery , if you wont pay us then next day you will become a item in our shop , hahah",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Yes, Place order"
+}).then((result) => {
+  if (result.isConfirmed) Swal.fire({
+    title: "Order placed",
+    text: "the item will be delivered to you when our witches like to deliver .",
+    icon: "success"
+  });
+});
+});
