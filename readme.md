@@ -29,6 +29,18 @@ this is totally only frontend no backend is there so your order won't store anyw
 - CSS
 - JS
 
+# features 
+
+- localstorge to store cart item .
+
+- overall total amount in bill .
+
+- seprate each item total amound in the bill .
+
+- easily increase and decrease quantity .
+
+- easily delete item from cart .
+
 # USAGE OF AI 
  Ai used on the debugging of code while making the reciept code .
 
