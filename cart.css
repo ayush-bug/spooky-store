@@ -74,7 +74,10 @@ body{
 .spooky-links a.active::after {
   width: 100%;
 }
-
+.cart-data{
+    display: flex;
+    flex-direction: row;
+}
 .cart {
   border: 1px solid #492020;
   padding: 10px 14px;
@@ -192,3 +195,101 @@ body{
     color: white;
 }
 
+.sub-total{
+    width:40% ;
+    max-height: 90vh;
+    margin-top: 20px;
+    overflow-y: auto;
+}
+
+.reciept{
+    width: 100%;
+    padding: 30px 25px;
+    background: #e8dfc9;
+    color: #211b18;
+    font-family: 'Courier New', monospace;
+    border: 1px solid #b8a88d;
+    
+}
+
+.reciept .name{
+    text-align: center;
+    font-size: 27px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #72151c;
+}
+.reciept .subname{
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-top: 8px;
+    color: #51413a;
+}
+
+.reciept .line{
+    width: 100%;
+    border-top: 1px solid #897b68;
+    margin: 20px 0;
+}
+
+.bill-info, .reciept-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 13px 0;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+.reciept h4{
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    color: #72151c;
+}
+.receipt-product{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 14px 0;
+    font-size: 15px;
+    line-height: 1;
+}
+.receipt-product span:first-child{
+    overflow-wrap: anywe;
+}
+.receipt-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.reciept .address{
+    text-align: center;
+    color: #8b1722;
+}
+.place-order{
+    width: 100%;
+    padding: 15px;
+    background:#72151c ;
+    color: #f4e9dc ;
+    border: 1px solid #4b0c11;
+   font-size: 12px;
+   font-weight: bold;
+   letter-spacing: 3px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.place-order:hover{
+    background: #a51c28;
+    box-shadow: 0 0 20px #8b172255;
+    transform: translateY(-3px);
+}

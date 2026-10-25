@@ -71,9 +71,9 @@ function makeReceipt(){
         return total + item.quantity;
     },0);
     
-    const alltotal = cart.reduce((total, item)=>{
-         return total + (item.price * item.quantity);
-    });
+    const alltotal = cart.reduce((total, item)=>
+          total + (Number(item.price) * (item.quantity)),0
+    );
   subtotal.innerHTML = `
     <div class="reciept">
     <p class="name">Spooky store</p>
