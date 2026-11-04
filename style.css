@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(22, 11, 11);
+    background-color: rgb(174, 98, 11);
 }
 
 #theme{
@@ -24,7 +24,7 @@ body{
 }
 .title{
     font-family: come;
-    color: rgb(183, 25, 25);
+    color: rgb(210, 135, 16);
     font-size: 150px;
 }
 
@@ -36,7 +36,7 @@ body{
 
 .title-img img {
     display: block;
-    filter: drop-shadow(5px 5px 15px red);
+    filter: drop-shadow(5px 5px 15px rgb(128, 13, 13));
 }
 
 .title-img::before,
@@ -118,7 +118,7 @@ body{
     justify-content: space-between;
     gap: 24px;
     background: #080808;
-    border-bottom: 1px solid #791f1f;
+    border-bottom: 1px solid #de3d08;
     font-family: monospace;
 }
 
@@ -148,8 +148,8 @@ body{
 }
 
 .spooky-links a:hover, .spooky-links a.home , .cart:hover{
-    color: #e32636;
-    text-shadow: 0 0 10px #8b0000;
+    color: #dc4c58;
+    text-shadow: 0 0 10px #be3636;
 }
 
 .spooky-links a{
@@ -164,7 +164,7 @@ body{
     bottom: 0;
     width: 0px;
     height: 2px;
-    background: #c01825;
+    background: #d86973;
     transition: width 0.3s;
 }
 
@@ -174,47 +174,23 @@ body{
 }
 
 .cart {
-  border: 1px solid #492020;
+  border: 1px solid #420909;
   padding: 10px 14px;
   white-space: nowrap;
 }
 
 .cart-item {
-  color: #ed3945;
+  color: #d41320;
   margin-left: 5px;
 }
 
 .spooky-shop-section{
-     background: #090909;
+     background: #dfd517;
      color: rgb(238, 238, 238);
      padding: 80px 7%;
      min-height: 100vh;
 }
-.shop-heading{
-    text-align: center;
-    margin-bottom: 55px;
-}
-.headone{
-    color: #a51b25;
-    font-family: monospace;
-    letter-spacing: 4px;
-    font-size: 12px;
-}
-.shop-heading h1{
-    font-family: cursive;
-    font-size: clamp(38px,6vh,68px);
-    font-weight: normal;
-    margin: 15px;
-    letter-spacing: 3px;
-}
-.shop-heading h1 span{
-    color: #b51d29;
-    text-shadow: 0 0 20px #5a0000;
-}
-.shop-heading > p:last-child{
-    color: #888888;
-    font-family:monospace;
-}
+
 
 .shop-grid{
     display: grid;
@@ -223,7 +199,7 @@ body{
 }
 
 .item-card{
-    background:#101010;
+    background:#de8512;
     border: 1px solid #292020;
     transition: transform 0.3s , border-color 0.3s , box-shadow 0.3s;
     overflow: hidden;
@@ -259,7 +235,7 @@ body{
     position: absolute;
     top: 12px;
     left: 12px;
-    background:#780e18;
+    background:#990e1c;
     color: wheat;
     padding: 6px 9px;
     font-size: 10px;
@@ -282,7 +258,7 @@ body{
 }
 
 .item-detail{
-    color: #858585;
+    color: #0b0000;
     font-size: 12px;
     font-family: monospace;
     min-height: 44px;

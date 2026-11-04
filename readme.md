@@ -59,5 +59,5 @@ this is totally only frontend no backend is there so your order won't store anyw
 
 I hope you will enjoy . 
 <pre>
-made with love by Ayush for 3am
+made with love by Ayush 
 </pre>
