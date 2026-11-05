@@ -15,6 +15,17 @@ function updatecartitem(){
 const cartcontain = document.querySelector(".items-contain");
 function renderCart(){ 
     cartcontain.innerHTML = "";
+
+  if(cart.length === 0){
+    cartcontain.innerHTML = `
+      <div class="emptycart">
+     <h1>YOur spooky cart is empty!</h1>
+     </div>
+     `;
+    const orderdisable= document.querySelector(".place-order");
+    orderdisable.disabled = true;
+  }
+
 cart.forEach((item , index)=> {
     cartcontain.innerHTML += `
      <div class="items">
@@ -127,10 +138,17 @@ document.querySelector(".place-order").addEventListener("click", function(){
   cancelButtonColor: "#d33",
   confirmButtonText: "Yes, Place order"
 }).then((result) => {
-  if (result.isConfirmed) Swal.fire({
+  if (result.isConfirmed){ 
+
+   cart = [];
+   localStorage.removeItem("spookycart");
+   renderCart();
+     Swal.fire({
     title: "Order placed",
     text: "the item will be delivered to you when our witches like to deliver .",
     icon: "success"
   });
+
+}
 });
 });
